@@ -7,6 +7,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Public Sans"', "sans-serif"], 
+        plex: ['"IBM Plex Mono"', "monospace"], 
+        bebas: ['"Bebas Neue"', "sans-serif"], 
       },
     },
   },

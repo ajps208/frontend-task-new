@@ -11,7 +11,7 @@ const features = [
 
 const Banner = () => {
   return (
-    <div className="w-full min-h-screen bg-black text-white flex items-center">
+    <div className="w-full  h-full bg-black text-white flex items-center">
       <div style={{ marginLeft: "15%"}} className="max-w-7xl grid grid-cols-1 gap-12">
         {/* company logo */}
         <div>
