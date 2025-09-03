@@ -1,12 +1,44 @@
-# React + Vite
+# Frontend Authentication Flow 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend project built with **React + Vite** implementing a complete **Login & Signup flow** using **JWT authentication**. The project follows the provided Figma design, integrates with backend APIs, and is deployed on **Vercel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links
 
-## Expanding the ESLint configuration
+- **Deployed App**: [Live Demo](https://frontend-task-new-topaz.vercel.app)  
+- **GitHub Repository**: [Source Code](https://github.com/ajps208/frontend-task-new)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Features
+
+- **Responsive UI** based on provided Figma design.
+- **Signup Page**
+  - Fields: Name, Email, Password, Confirm Password
+  - Validations: required fields, valid email, strong password, confirm password match
+  - On success → Redirects to Login
+- **Login Page**
+  - Fields: Email, Password
+  - Validations: required fields, email format
+  - On success → Fetches JWT token & stores securely
+  - Redirects user to Dashboard
+- **Authentication Handling**
+  - JWT stored in `localStorage`
+  - Protected routes → Redirects to Login if not authenticated
+  - Logout clears token & redirects to Login
+- **Dashboard**
+  - Displays a welcome message with the logged-in user’s name
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – UI library  
+- **Vite** – Build tool  
+- **Tailwind CSS** – Styling  
+- **CSS** – Custom styles  
+- **Axios** – API requests  
+- **React Router** – Routing & Protected Routes  
+- **Vercel** – Deployment  
+
