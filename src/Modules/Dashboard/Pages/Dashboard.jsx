@@ -48,7 +48,7 @@ const Dashboard = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("email");
     navigate("/auth");
-    window.location.reload();
+    // window.location.reload();
   };
 
   // main sidebar items
