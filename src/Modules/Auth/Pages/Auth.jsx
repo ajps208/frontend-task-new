@@ -5,7 +5,7 @@ import AuthForm from "../Components/AuthForm";
 const Auth = () => {
   return (
 
-    <div className="bg-black flex flex-col lg:flex-row min-h-screen">
+    <div style={{background:"black"}} className=" flex flex-col lg:flex-row min-h-screen">
       {/* Left side - Banner (only visible on large screens) */}
       <div className="w-3/5 hidden lg:flex items-center justify-center">
         <Banner />
