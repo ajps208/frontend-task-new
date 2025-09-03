@@ -63,12 +63,12 @@ const Dashboard = () => {
   return (
     <div className="w-full h-screen bg-black flex flex-col">
       {/* Top Header Section */}
-      <div className="w-full h-[5.625rem] lg:h-[9.625rem] flex items-center justify-center">
+      <div className="w-full h-[4.5rem] lg:h-[7.7rem] flex items-center justify-center">
         <div className="h-5/6 w-[90%] flex items-center justify-between">
           {/* Left - Logo & Breadcrumb */}
           <div className="w-[25%] h-full flex items-center justify-between">
             <img
-              className="object-contain w-[2.84rem] h-[2.84rem] lg:w-[4.28rem] lg:h-[4.28rem]"
+              className="object-contain w-[2.272rem] h-[2.272rem] lg:w-[3.424rem] lg:h-[3.424rem]"
               src={logoonly}
               alt="logo"
             />
@@ -83,19 +83,19 @@ const Dashboard = () => {
           {/* Right - Buttons & Avatar */}
           <div className="w-[55%] lg:w-[51%] h-full flex items-center justify-evenly">
             {/* Upgrade Button */}
-            <div className="w-[8.4375rem] lg:w-[11.5625rem] h-[1.75rem] bg-[#544415] rounded-sm text-[#FCD34D] text-[0.5625rem] lg:text-[0.6875rem] flex items-center justify-center gap-1">
+            <div className="w-[6.75rem] lg:w-[9.25rem] h-[1.4rem] bg-[#544415] rounded-sm text-[#FCD34D] text-[0.45rem] lg:text-[0.55rem] flex items-center justify-center gap-1">
               <i className="fa-regular fa-gem"></i>
               UPGRADE TO PREMIUM
             </div>
 
             {/* Help Center */}
-            <div className="w-[9.625rem] h-[1.75rem] text-white hidden lg:flex lg:items-center lg:justify-end gap-1">
+            <div className=" w-[8rem] h-[1.4rem] text-[0.45rem] lg:text-[0.85rem] text-white hidden lg:flex lg:items-center lg:justify-evenly gap-1">
               <img src={help} alt="help" />
               HELP CENTER
             </div>
 
             {/* Feedback */}
-            <div className="w-[9.625rem] h-[1.75rem] text-white hidden lg:flex lg:items-center lg:justify-end gap-1">
+            <div className="w-[8rem] h-[1.4rem] text-[0.45rem] lg:text-[0.85rem] text-white hidden lg:flex lg:items-center lg:justify-evenly gap-1">
               <img src={feedback} alt="feedback" />
               FEEDBACK
             </div>
@@ -104,7 +104,7 @@ const Dashboard = () => {
             <div className="relative">
               <div
                 onClick={() => setOpenMenu(!openMenu)}
-                className="cursor-pointer relative inline-flex items-center justify-center w-[1.875rem] h-[1.875rem] lg:w-[2.5rem] lg:h-[2.5rem] overflow-hidden bg-green-600 rounded-full"
+                className="cursor-pointer relative inline-flex items-center justify-center w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem] overflow-hidden bg-green-600 rounded-full"
               >
                 <span className="font-medium text-gray-600 dark:text-gray-600 capitalize">
                   {useremail?.slice(0, 1)}
@@ -113,10 +113,10 @@ const Dashboard = () => {
 
               {/* Dropdown Menu */}
               {openMenu && (
-                <div className="absolute top-13 right-0 mt-2 w-24 bg-white shadow-lg rounded-md py-2 z-50">
+                <div className="absolute top-10 right-0 mt-1 w-20 bg-white shadow-lg rounded-md py-1 z-50">
                   <button
                     onClick={handleLogout}
-                    className="w-full text-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="w-full text-center px-3 py-1 text-xs text-gray-700 hover:bg-gray-100"
                   >
                     Logout
                   </button>
@@ -130,7 +130,7 @@ const Dashboard = () => {
       {/* Bottom Section - Sidebar + Main Content */}
       <div className="flex flex-col lg:flex-row flex-1 overflow-hidden">
         {/* Sidebar Block */}
-        <div className="responsive-margin1 w-full h-[5rem] lg:h-full lg:w-[15%] scroll-hidden">
+        <div className="responsive-margin1 w-full h-[4rem] lg:h-full lg:w-[15%] scroll-hidden">
           <div
             className="w-full lg:h-[80%] flex lg:flex-col items-center 
                   justify-start lg:justify-evenly overflow-x-auto lg:overflow-x-visible scrollbar-thin scrollbar-thumb-black scrollbar-track-black"
@@ -140,7 +140,7 @@ const Dashboard = () => {
               <div
                 key={item.id}
                 onClick={() => setSelected(item.id)}
-                className={`flex-shrink-0 w-[7.755rem] h-[2rem] lg:h-[6.75rem] text-[0.525rem] lg:text-[0.7625rem] rounded-md flex flex-row lg:flex-col items-center justify-center gap-4 cursor-pointer transition
+                className={`flex-shrink-0 w-[7.9rem] lg:w-[6.204rem] h-[1.8rem] lg:h-[5.4rem] text-[0.56rem] lg:text-[0.61rem] rounded-sm lg:rounded-md flex flex-row lg:flex-col items-center justify-center gap-3 cursor-pointer transition
                 ${
                   selected === item.id
                     ? "text-white bg-violet-500 lg:bg-gray-900 shadow-lg font-semibold"
@@ -149,7 +149,7 @@ const Dashboard = () => {
                  hover:text-white hover:border-2 hover:border-white/40 hover:shadow-md`}
               >
                 <img
-                  className="w-4 h-4 lg:w-8 lg:h-8"
+                  className="w-3 h-3 lg:w-6 lg:h-6"
                   src={item.icon}
                   alt={item.label}
                 />
@@ -160,8 +160,8 @@ const Dashboard = () => {
 
           {/* Breadcrumb for mobile */}
           <div
-            style={{ margin: "1.2rem" }}
-            className="lg:hidden text-[0.625rem]"
+            style={{ margin: "0.96rem" }}
+            className="lg:hidden text-[0.6rem]"
           >
             <i className="fa-regular fa-circle text-violet-500"></i>{" "}
             <span className="text-gray-500">DASHBOARD / </span>{" "}
@@ -171,15 +171,15 @@ const Dashboard = () => {
 
         {/* Main Content Block */}
         <div
-          style={{ padding: "10px" }}
-          className="w-full flex-1 lg:w-[85%] p-4 lg:p-8 overflow-auto min-w-0"
+          style={{ padding: "20px" }}
+          className="w-full flex-1 lg:w-[85%] p-3 lg:p-6 overflow-auto min-w-0"
         >
           <div className="font-['Public Sans'] text-[#262626]">
             {/* Greeting */}
-            <p className="font-bold text-[24px] leading-[30px] sm:text-[34px] sm:leading-[40px] lg:text-[48px] lg:leading-[64px] break-words">
+            <p className="font-bold text-[19px] leading-[24px] sm:text-[27px] sm:leading-[32px] lg:text-[38px] lg:leading-[51px] break-words">
               Hi {useremail},
             </p>
-            <p className="font-normal text-[12px] leading-[20px] lg:text-[16px] lg:leading-[24px]">
+            <p className="font-normal text-[10px] leading-[16px] lg:text-[13px] lg:leading-[19px]">
               Here's your summary for the day
             </p>
           </div>

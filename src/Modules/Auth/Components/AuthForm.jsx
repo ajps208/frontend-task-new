@@ -145,17 +145,17 @@ const AuthForm = () => {
       <img
         src={logo}
         alt="Falconfeeds.io"
-        className="w-[280px] h-[40px] object-contain absolute top-16 left-5 lg:hidden"
+        className="w-[224px] h-[32px] object-contain absolute top-12 left-4 lg:hidden"
       />
 
       {/* div for form + content */}
-      <div className="absolute top-28 lg:top-26 w-[90%] lg:w-[70%] left-5 lg:left-1/2 lg:-translate-x-1/2">
+      <div className="absolute top-22 lg:top-20 w-[90%] lg:w-[70%] left-4 lg:left-1/2 lg:-translate-x-1/2">
         {/* heading */}
-        <div className="font-publicSans ">
-          <h3 className="text-white font-normal lg:font-semibold text-[22px] lg:text-[40px] leading-[60px] lg:leading-20">
+        <div className="font-publicSans">
+          <h3 className="text-white font-normal lg:font-semibold text-[18px] lg:text-[32px] leading-[48px] lg:leading-[64px]">
             {isSignIn ? "Sign in" : "Sign up for free"}
           </h3>
-          <p className="text-gray-500 font-normal text-[15px] lg:text-[16px] ">
+          <p className="text-gray-500 font-normal text-[12px] lg:text-[13px]">
             {isSignIn
               ? "View latest updates and developments in CTI"
               : "Get started right away, no credit card required!"}
@@ -163,10 +163,10 @@ const AuthForm = () => {
         </div>
 
         {/* form container */}
-        <div className="w-full absolute top-24 lg:top-32">
+        <div className="w-full absolute top-20 lg:top-26">
           <form
             onSubmit={handleSubmit}
-            className=" grid grid-cols-2 gap-4 lg:gap-6"
+            className="grid grid-cols-2 gap-3 lg:gap-5"
           >
             {/* signup only fields */}
             {!isSignIn && (
@@ -228,7 +228,7 @@ const AuthForm = () => {
             </div>
 
             {/* terms / forgot password */}
-            <div className="col-span-2 text-white font-light text-[14px] lg:text-[16px] flex gap-4">
+            <div className="col-span-2 text-white font-light text-[11px] lg:text-[13px] flex gap-3">
               {isSignIn ? (
                 <a href="#" className="text-green-600 hover:underline">
                   Forgot Password ?
@@ -260,7 +260,7 @@ const AuthForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full h-9 lg:h-12 rounded-sm py-3 font-publicSans text-[14px] lg:text-[18px] font-semibold leading-[30px] text-white 
+                className={`w-full h-7 lg:h-10 rounded-sm py-2 font-publicSans text-[11px] lg:text-[14px] font-semibold leading-[24px] text-white 
                 ${
                   loading
                     ? "bg-green-400 cursor-not-allowed"
@@ -268,8 +268,8 @@ const AuthForm = () => {
                 }`}
               >
                 {loading ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                  <div className="flex items-center justify-center gap-1">
+                    <span className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
                     {isSignIn ? "Signing in..." : "Creating..."}
                   </div>
                 ) : isSignIn ? (
@@ -284,30 +284,30 @@ const AuthForm = () => {
           {/* divider line with "or" */}
           <div className="flex flex-col items-center">
             <div
-              style={{ marginTop: "20px" }}
+              style={{ marginTop: "16px" }}
               className="flex items-center w-5/6"
             >
               <div className="flex-grow border-t border-gray-500"></div>
-              <span className="px-3 text-gray-400 text-sm">or</span>
+              <span className="px-2 text-gray-400 text-xs">or</span>
               <div className="flex-grow border-t border-gray-500"></div>
             </div>
 
             {/* Google login */}
             <div
-              style={{ marginTop: "20px" }}
-              className="w-[58%] h-9 lg:h-12 rounded-sm bg-blue-500 font-publicSans text-[14px] lg:text-[18px] font-normal text-white flex items-center justify-center"
+              style={{ marginTop: "16px" }}
+              className="w-[58%] h-7 lg:h-10 rounded-sm bg-blue-500 font-publicSans text-[11px] lg:text-[14px] font-normal text-white flex items-center justify-center"
             >
               <img
-                style={{ marginLeft: "8px" }}
+                style={{ marginLeft: "6px" }}
                 src={googlelogo}
                 alt="google logo"
-                className="w-8 h-7 lg:w-12 lg:h-10 rounded-sm ml-2 mr-3"
+                className="w-6 h-5 lg:w-10 lg:h-8 rounded-sm ml-1 mr-2"
               />
               <span className="flex-1 text-center">Continue with Google</span>
             </div>
 
             {/* switch between signin and signup */}
-            <div className="responsive-margin text-white font-light text-[14px] lg:text-[16px] text-center">
+            <div className="responsive-margin text-white font-light text-[11px] lg:text-[13px] text-center">
               {isSignIn ? (
                 <p>
                   Don’t have an account?{" "}
@@ -342,15 +342,15 @@ const AuthForm = () => {
 
       {/* toast notification */}
       {showToast && (
-        <div className="fixed top-6 left-1/2 lg:left-3/4 transform -translate-x-1/2 lg:-translate-x-1/4 z-50 w-11/12 max-w-md">
+        <div className="fixed top-5 left-1/2 lg:left-3/4 transform -translate-x-1/2 lg:-translate-x-1/4 z-50 w-11/12 max-w-sm">
           <div
-            style={{ padding: "10px" }}
-            className="font-publicSans text-white font-light text-[14px] lg:text-[16px] border-2 rounded-sm border-red-800 bg-[#1A0A0ACC] backdrop-blur-sm flex items-center justify-between"
+            style={{ padding: "8px" }}
+            className="font-publicSans text-white font-light text-[11px] lg:text-[13px] border-2 rounded-sm border-red-800 bg-[#1A0A0ACC] backdrop-blur-sm flex items-center justify-between"
           >
             <span>{toastMessage}</span>
             <button
               onClick={handleCloseToast}
-              className="ml-4 text-white hover:text-gray-300 transition-colors duration-200 text-lg font-bold"
+              className="ml-3 text-white hover:text-gray-300 transition-colors duration-200 text-base font-bold"
               aria-label="Close notification"
             >
               ×
