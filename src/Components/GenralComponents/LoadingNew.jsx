@@ -3,7 +3,7 @@ import React from "react";
 const LoadingNew = () => {
   return (
     <div className="w-full h-screen bg-black text-white flex flex-col relative">
-      <p className="text-[#A3A3A3] font-mono text-base tracking-wide text-center pt-8">
+      <p style={{marginTop:"1%"}} className="text-[#A3A3A3] font-mono text-base tracking-wide text-center ">
         Logging you into
       </p>
       <div className="flex-1 flex flex-col items-center justify-center space-y-4">

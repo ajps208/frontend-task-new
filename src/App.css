@@ -1,9 +1,24 @@
 .responsive-margin {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
-@media (max-width: 640px) { 
+@media (max-width: 640px) {
   .responsive-margin {
     margin-top: 25px;
   }
+}
+
+.responsive-margin1 {
+  margin-top: 20px;
+  padding: 0px;
+}
+
+@media (max-width: 640px) {
+  .responsive-margin1 {
+    margin-top: 0px;
+    padding: 2%;
+  }
+}
+.scroll-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
