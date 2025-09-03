@@ -9,6 +9,7 @@ import incidents from "../../../assets/nearby_error.png";
 import contacts from "../../../assets/contacts.png";
 import "../../../App.css";
 import LoadingNew from "../../../Components/GenralComponents/LoadingNew";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   // state for sidebar selection
@@ -22,6 +23,9 @@ const Dashboard = () => {
 
   // user email fetched from localStorage
   const [useremail, setUseremail] = useState(null);
+
+  // navigate
+  const navigate = useNavigate();
 
   // get email from localStorage on mount
   useEffect(() => {
@@ -43,6 +47,7 @@ const Dashboard = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("email");
+    navigate("/auth");
     window.location.reload();
   };
 
